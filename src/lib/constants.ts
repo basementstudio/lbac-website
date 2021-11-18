@@ -28,12 +28,12 @@ export const basementLog = `
 
 // todo update this data
 export const defaultMeta = {
-  title: 'next-typescript | basement.studio',
-  description: `A minimalist's boilerplate — Next.js with TypeScript.`,
-  ogImage: `${siteOrigin}/og.png`,
+  title: 'Official Page for LBAC | Community Driven and Controlled',
+  description: `We are a global community built on a mutually shared vision and passion for the art of this project.`,
+  ogImage: `${siteOrigin}/og.jpeg`,
   twitter: {
-    handle: '@basementstudio',
-    site: '@basementstudio'
+    handle: '@Lilbabyapeclub',
+    site: '@Lilbabyapeclub'
   }
 }
 

@@ -3,7 +3,6 @@ import NextHead from 'next/head'
 import { NextSeo, NextSeoProps } from 'next-seo'
 import * as React from 'react'
 
-import { useMedia } from '~/hooks/use-media'
 import { defaultMeta, siteOrigin } from '~/lib/constants'
 
 type Meta = {
@@ -17,7 +16,6 @@ export type HeadProps = Meta & { rawNextSeoProps?: NextSeoProps }
 
 export const Head = (props: HeadProps) => {
   const router = useRouter()
-  const isDark = useMedia('(prefers-color-scheme: dark)')
 
   const nextSeoProps: NextSeoProps = React.useMemo(() => {
     return {
@@ -50,7 +48,7 @@ export const Head = (props: HeadProps) => {
       <NextHead>
         <meta charSet="utf-8" />
         <meta name="theme-color" content="#ffffff" />
-        <link rel="icon" href={isDark ? '/favicon-dark.svg' : '/favicon.svg'} />
+        <link rel="icon" href={'/favicon.png'} />
         <link rel="mask-icon" href="/favicon.svg" color="#000" />
       </NextHead>
     </>
