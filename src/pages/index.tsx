@@ -1,5 +1,6 @@
 import 'keen-slider/keen-slider.min.css'
 
+import clsx from 'clsx'
 import { useKeenSlider } from 'keen-slider/react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -29,7 +30,8 @@ const roadmap: RoadmapCardProps[] = [
           <li>Website ✅</li>
         </ul>
       </p>
-    )
+    ),
+    isActive: true
   },
   {
     number: '02',
@@ -82,7 +84,6 @@ const FAQs: FAQProps[] = [
 ]
 
 const HomePage = () => {
-  // const [] = React.useState(0)
   const [ref] = useKeenSlider<HTMLDivElement>({
     slidesPerView: 2,
     spacing: 48
@@ -172,10 +173,10 @@ const HomePage = () => {
           </header>
         </div>
 
-        <h1 className="font-heading text-4xl uppercase text-center mt-16">
-          welcome to the lil BABY APE CLUB
+        <h1 className="font-heading text-5xl leading-normal uppercase text-center mt-16">
+          welcome to the lil BABY APE&nbsp;CLUB
         </h1>
-        <div className="text-center space-y-6 mt-8 text-gray-100">
+        <div className="text-center text-lg space-y-6 mt-8 text-gray-100">
           <p>
             We are a global community built on a mutually shared vision and
             passion for the art of this project. The team has prepared this
@@ -215,12 +216,12 @@ const HomePage = () => {
       <Container>
         <section className="mt-56">
           <h2
-            className="font-heading text-4xl uppercase text-center mt-16"
+            className="font-heading text-5xl uppercase text-center mt-16"
             id="roadmap"
           >
             ROADMAP
           </h2>
-          <p className="text-center text-gray-100 mt-8 mx-auto max-w-3xl">
+          <p className="text-center  text-lg text-gray-100 mt-8 mx-auto max-w-3xl">
             Our initial plan is to grow the community and show everybody that
             anything can be overcome if our community works together!{' '}
           </p>
@@ -243,7 +244,7 @@ const HomePage = () => {
       <Container>
         <section className="mt-56">
           <h2
-            className="font-heading text-4xl uppercase text-center mt-16"
+            className="font-heading text-5xl uppercase text-center mt-16"
             id="faq"
           >
             FAQ
@@ -334,23 +335,65 @@ const HomePage = () => {
 
         <div>
           <div className="absolute left-[279px] bottom-0 flex">
-            <Image src={ape3} alt="ape 3" width={141} height={137} />
+            <Image
+              src={ape3}
+              alt="ape 3"
+              width={141}
+              height={137}
+              loading="eager"
+              priority
+            />
           </div>
           <div className="absolute left-[149px] bottom-0 flex">
-            <Image src={ape2} alt="ape 2" width={172} height={166} />
+            <Image
+              src={ape2}
+              alt="ape 2"
+              width={172}
+              height={166}
+              loading="eager"
+              priority
+            />
           </div>
           <div className="absolute -left-4 bottom-0 flex">
-            <Image src={ape1} alt="ape 1" width={225} height={216} />
+            <Image
+              src={ape1}
+              alt="ape 1"
+              width={225}
+              height={216}
+              loading="eager"
+              priority
+            />
           </div>
 
           <div className="absolute right-[279px] bottom-0 flex">
-            <Image src={ape4} alt="ape 4" width={155} height={277} />
+            <Image
+              src={ape4}
+              alt="ape 4"
+              width={155}
+              height={277}
+              loading="eager"
+              priority
+            />
           </div>
           <div className="absolute right-[149px] bottom-0 flex">
-            <Image src={ape5} alt="ape 5" width={177} height={172} />
+            <Image
+              src={ape5}
+              alt="ape 5"
+              width={177}
+              height={172}
+              loading="eager"
+              priority
+            />
           </div>
           <div className="absolute -right-4 bottom-0 flex">
-            <Image src={ape6} alt="ape 6" width={228} height={217} />
+            <Image
+              src={ape6}
+              alt="ape 6"
+              width={228}
+              height={217}
+              loading="eager"
+              priority
+            />
           </div>
         </div>
       </footer>
@@ -362,9 +405,10 @@ type RoadmapCardProps = {
   number: string
   title: React.ReactNode
   content: React.ReactNode
+  isActive?: boolean
 }
 
-function RoadmapCard({ number, title, content }: RoadmapCardProps) {
+function RoadmapCard({ number, title, content, isActive }: RoadmapCardProps) {
   return (
     <div className="pt-8 relative">
       <div
@@ -376,7 +420,12 @@ function RoadmapCard({ number, title, content }: RoadmapCardProps) {
         </p>
         <h3 className="py-2 pl-2 pr-3 mt-[2px]">{title}</h3>
       </div>
-      <div className="bg-gradient-to-b from-purple to-light-blue text-black rounded-2xl overflow-hidden p-8 pt-12 h-[220px]">
+      <div
+        className={clsx(
+          'from-purple to-light-blue text-black rounded-2xl overflow-hidden p-8 pt-12 h-[220px]',
+          isActive ? 'bg-gradient-to-b' : 'bg-[#292929] text-white'
+        )}
+      >
         <div className="text-lg">{content}</div>
       </div>
     </div>

@@ -6,9 +6,7 @@ export const isServer = !isClient
 
 export const siteURL = new URL(
   process.env.NEXT_PUBLIC_SITE_URL ??
-    (isDev
-      ? 'http://localhost:3000'
-      : 'https://next-typescript.basement.studio/') // TODO: use your actual production url as default
+    (isDev ? 'http://localhost:3000' : 'https://lbac-website.vercel.app/') // TODO: use your actual production url as default
 )
 export const siteOrigin = siteURL.origin
 

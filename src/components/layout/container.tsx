@@ -8,7 +8,7 @@ export const Container = React.forwardRef<
   return (
     <div
       {...props}
-      className={clsx('max-w-5xl mx-auto px-7', className)}
+      className={clsx('max-w-6xl 2xl:max-w-7xl mx-auto px-7', className)}
       ref={ref}
     />
   )
