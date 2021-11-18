@@ -50,6 +50,63 @@ export const Head = (props: HeadProps) => {
         <meta name="theme-color" content="#ffffff" />
         <link rel="icon" href={'/favicon.png'} />
         <link rel="mask-icon" href="/favicon.svg" color="#000" />
+
+        <link
+          href="/fonts/tusker/TuskerGrotesk-7600Semibold.woff2"
+          rel="preload"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="/fonts/tusker/TuskerGrotesk-7600Semibold.woff"
+          rel="preload"
+          as="font"
+          type="font/woff"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="/fonts/tusker/TuskerGrotesk-6700Bold.woff2"
+          rel="preload"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="/fonts/tusker/TuskerGrotesk-6700Bold.woff"
+          rel="preload"
+          as="font"
+          type="font/woff"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="/fonts/helvetica-now/HelveticaNowDisplay-Bold.woff2"
+          rel="preload"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="/fonts/helvetica-now/HelveticaNowDisplay-Bold.woff"
+          rel="preload"
+          as="font"
+          type="font/woff"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="/fonts/helvetica-now/HelveticaNowDisplay-Medium.woff2"
+          rel="preload"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="/fonts/helvetica-now/HelveticaNowDisplay-Medium.woff"
+          rel="preload"
+          as="font"
+          type="font/woff"
+          crossOrigin="anonymous"
+        />
       </NextHead>
     </>
   )

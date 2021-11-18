@@ -13,7 +13,13 @@ module.exports = {
       body: 'var(--font-body)',
       heading: 'var(--font-heading)'
     },
-    extend: {}
+    extend: {
+      screens: {
+        's-ape-3': '1415px',
+        's-ape-2': '1241px',
+        's-ape-1': '1067px'
+      }
+    }
   },
   variants: {
     extend: {}

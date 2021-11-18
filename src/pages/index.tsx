@@ -50,7 +50,10 @@ const roadmap: RoadmapCardProps[] = [
     number: '03',
     title: 'Compound',
     content: (
-      <p>Create Mutant Baby Apes, Baby Ape Token airdrop and some merch!</p>
+      <p>
+        Work with community to vote for the next steps. Breeding - Token -
+        Metaverse - Merch. The future is unlimited.
+      </p>
     )
   }
 ]
@@ -86,8 +89,16 @@ const FAQs: FAQProps[] = [
 
 const HomePage = () => {
   const [ref] = useKeenSlider<HTMLDivElement>({
-    slidesPerView: 2,
-    spacing: 48
+    spacing: 48,
+    slidesPerView: 1,
+    breakpoints: {
+      '(min-width: 470px)': {
+        slidesPerView: 1.25
+      },
+      '(min-width: 1024px)': {
+        slidesPerView: 2
+      }
+    }
   })
 
   return (
@@ -191,33 +202,35 @@ const HomePage = () => {
         </div>
       </Container>
 
-      <Container>
-        <section className="mt-56">
-          <h2
-            className="font-heading text-3xl sm:text-5xl uppercase text-center mt-16"
-            id="roadmap"
-          >
-            ROADMAP
-          </h2>
-          <p className="text-center sm:text-lg text-gray-100 mt-8 mx-auto max-w-3xl">
-            Our initial plan is to grow the community and show everybody that
-            anything can be overcome if our community works together!{' '}
-          </p>
-          <div
-            ref={ref}
-            className="keen-slider mt-12"
-            style={{ overflow: 'visible' }}
-          >
-            {roadmap.map((card) => {
-              return (
-                <div key={card.number} className="keen-slider__slide">
-                  <RoadmapCard {...card} />
-                </div>
-              )
-            })}
-          </div>
-        </section>
-      </Container>
+      <div className="overflow-hidden">
+        <Container>
+          <section className="mt-56">
+            <h2
+              className="font-heading text-3xl sm:text-5xl uppercase text-center mt-16"
+              id="roadmap"
+            >
+              ROADMAP
+            </h2>
+            <p className="text-center sm:text-lg text-gray-100 mt-8 mx-auto max-w-3xl">
+              Our initial plan is to grow the community and show everybody that
+              anything can be overcome if our community works together!{' '}
+            </p>
+            <div
+              ref={ref}
+              className="keen-slider mt-12"
+              style={{ overflow: 'visible' }}
+            >
+              {roadmap.map((card) => {
+                return (
+                  <div key={card.number} className="keen-slider__slide">
+                    <RoadmapCard {...card} />
+                  </div>
+                )
+              })}
+            </div>
+          </section>
+        </Container>
+      </div>
 
       <Container>
         <section className="mt-56">
@@ -305,14 +318,15 @@ const HomePage = () => {
                 </svg>
               </a>
             </div>
-            <p className="mt-11 font-bold uppercase">
-              🍌 Official page for LBAC | Community driven and controlled 🍌
+            <p className="mt-11 text-xs sm:text-base font-bold uppercase text-center">
+              🍌 Official page for LBAC | Community driven and
+              controlled&nbsp;🍌
             </p>
           </div>
         </Container>
 
         <div>
-          <div className="absolute left-[279px] bottom-0 flex">
+          <div className="absolute left-[279px] bottom-0 flex opacity-0 s-ape-3:opacity-100 transition-opacity">
             <Image
               src={ape3}
               alt="ape 3"
@@ -323,7 +337,7 @@ const HomePage = () => {
               priority
             />
           </div>
-          <div className="absolute left-[149px] bottom-0 flex">
+          <div className="absolute left-[149px] bottom-0 flex opacity-0 s-ape-2:opacity-100 transition-opacity">
             <Image
               src={ape2}
               alt="ape 2"
@@ -334,7 +348,7 @@ const HomePage = () => {
               priority
             />
           </div>
-          <div className="absolute -left-4 bottom-0 flex">
+          <div className="absolute -left-4 bottom-0 flex opacity-0 s-ape-1:opacity-100 transition-opacity">
             <Image
               src={ape1}
               alt="ape 1"
@@ -346,7 +360,7 @@ const HomePage = () => {
             />
           </div>
 
-          <div className="absolute right-[279px] bottom-0 flex">
+          <div className="absolute right-[279px] bottom-0 flex opacity-0 s-ape-3:opacity-100 transition-opacity">
             <Image
               src={ape4}
               alt="ape 4"
@@ -357,7 +371,7 @@ const HomePage = () => {
               priority
             />
           </div>
-          <div className="absolute right-[149px] bottom-0 flex">
+          <div className="absolute right-[149px] bottom-0 flex opacity-0 s-ape-2:opacity-100 transition-opacity">
             <Image
               src={ape5}
               alt="ape 5"
@@ -368,7 +382,7 @@ const HomePage = () => {
               priority
             />
           </div>
-          <div className="absolute -right-4 bottom-0 flex">
+          <div className="absolute -right-4 bottom-0 flex opacity-0 s-ape-1:opacity-100 transition-opacity">
             <Image
               src={ape6}
               alt="ape 6"
@@ -406,7 +420,7 @@ function RoadmapCard({ number, title, content, isActive }: RoadmapCardProps) {
       </div>
       <div
         className={clsx(
-          'from-purple to-light-blue text-black rounded-2xl overflow-hidden p-8 pt-12 h-[220px]',
+          'from-purple to-light-blue text-black rounded-2xl overflow-hidden p-8 pt-12 min-h-[220px]',
           isActive ? 'bg-gradient-to-b' : 'bg-[#292929] text-white'
         )}
       >
@@ -431,8 +445,8 @@ function FAQItem({ title, content }: FAQProps) {
         setIsOpen((p) => !p)
       }}
     >
-      <div className="flex items-center justify-between space-x-2 w-full">
-        <p className="font-heading font-bold text-2xl">{title}</p>
+      <div className="flex justify-between space-x-4 w-full items-start">
+        <p className="font-heading font-bold text-xl sm:text-2xl">{title}</p>
         {isOpen ? (
           <svg
             width="32"
@@ -440,6 +454,7 @@ function FAQItem({ title, content }: FAQProps) {
             viewBox="0 0 32 32"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            className="flex-shrink-0"
           >
             <path
               d="M16.0001 29.3334C23.3639 29.3334 29.3334 23.3639 29.3334 16.0001C29.3334 8.63628 23.3639 2.66675 16.0001 2.66675C8.63628 2.66675 2.66675 8.63628 2.66675 16.0001C2.66675 23.3639 8.63628 29.3334 16.0001 29.3334Z"
@@ -473,6 +488,7 @@ function FAQItem({ title, content }: FAQProps) {
             viewBox="0 0 32 32"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            className="flex-shrink-0"
           >
             <path
               d="M16.0001 29.3334C23.3639 29.3334 29.3334 23.3639 29.3334 16.0001C29.3334 8.63628 23.3639 2.66675 16.0001 2.66675C8.63628 2.66675 2.66675 8.63628 2.66675 16.0001C2.66675 23.3639 8.63628 29.3334 16.0001 29.3334Z"
