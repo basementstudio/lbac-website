@@ -295,10 +295,10 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.0.7.tgz#82f83dcc2eb9b1e1d559b3aca96783e285eb8592"
   integrity sha512-3Zi2LGbCLDz4IIL7ir6wD0u/ggHotLkK5SlVzFzTcYaNgPR4MAt/9JYZqXWKcofPWEoptfpnCJU8Bq9sxw8QUg==
 
-"@types/css-font-loading-module@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@types/css-font-loading-module/-/css-font-loading-module-0.0.6.tgz#1ac3417ed31eeb953134d29b56bca921644b87c0"
-  integrity sha512-MBvSMSxXFtIukyXRU3HhzL369rIWaqMVQD5kmDCYIFFD6Fe3lJ4c9UnLD02MLdTp7Z6ti7rO3SQtuDo7C80mmw==
+"@types/css-font-loading-module@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@types/css-font-loading-module/-/css-font-loading-module-0.0.7.tgz#2f98ede46acc0975de85c0b7b0ebe06041d24601"
+  integrity sha512-nl09VhutdjINdWyXxHWN/w9zlNCfr60JUqJbd24YXUuCwgeL0TpFSdElCwb6cxfB6ybE19Gjj4g0jsgkXxKv1Q==
 
 "@types/json-schema@^7.0.7":
   version "7.0.9"
