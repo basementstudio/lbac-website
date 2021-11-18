@@ -91,7 +91,7 @@ const HomePage = () => {
   })
 
   return (
-    <PageLayout headProps={{}}>
+    <PageLayout>
       <div className="h-[33px]">
         <Marquee
           gradient={false}
@@ -100,14 +100,32 @@ const HomePage = () => {
           🍌 Official page for LBAC 🍌 Community driven and controlled 🍌
           Official page for LBAC 🍌 Community driven and controlled 🍌 Official
           page for LBAC 🍌 Community driven and controlled 🍌 Official page for
-          LBAC 🍌 Community driven and controlled&nbsp;
+          LBAC 🍌 Community driven and controlled 🍌 Official page for LBAC 🍌
+          Community driven and controlled 🍌 Official page for LBAC 🍌 Community
+          driven and controlled 🍌 Official page for LBAC 🍌 Community driven
+          and controlled 🍌 Official page for LBAC 🍌 Community driven and
+          controlled 🍌 Official page for LBAC 🍌 Community driven and
+          controlled 🍌 Official page for LBAC 🍌 Community driven and
+          controlled 🍌 Official page for LBAC 🍌 Community driven and
+          controlled 🍌 Official page for LBAC 🍌 Community driven and
+          controlled 🍌 Official page for LBAC 🍌 Community driven and
+          controlled 🍌 Official page for LBAC 🍌 Community driven and
+          controlled 🍌 Official page for LBAC 🍌 Community driven and
+          controlled 🍌 Official page for LBAC 🍌 Community driven and
+          controlled 🍌 Official page for LBAC 🍌 Community driven and
+          controlled 🍌 Official page for LBAC 🍌 Community driven and
+          controlled 🍌 Official page for LBAC 🍌 Community driven and
+          controlled 🍌 Official page for LBAC 🍌 Community driven and
+          controlled 🍌 Official page for LBAC 🍌 Community driven and
+          controlled 🍌 Official page for LBAC 🍌 Community driven and
+          controlled&nbsp;
         </Marquee>
       </div>
 
       <Container className="pt-12">
         <div className="flex justify-center">
           <header className="flex items-center space-x-16">
-            <div className="w-24 text-right">
+            <div className="w-24 text-right text-sm sm:text-base">
               <Link href="#roadmap">
                 <a className="uppercase font-bold">ROADMAP</a>
               </Link>
@@ -125,7 +143,7 @@ const HomePage = () => {
                 />
               </a>
             </Link>
-            <div className="w-24 text-left">
+            <div className="w-24 text-left text-sm sm:text-base">
               <Link href="#faq">
                 <a className="uppercase font-bold">FAQ</a>
               </Link>
@@ -133,10 +151,10 @@ const HomePage = () => {
           </header>
         </div>
 
-        <h1 className="font-heading text-5xl leading-normal uppercase text-center mt-16">
+        <h1 className="font-heading text-3xl sm:text-5xl sm:leading-normal uppercase text-center mt-16">
           welcome to the lil BABY APE&nbsp;CLUB
         </h1>
-        <div className="text-center text-lg space-y-6 mt-8 text-gray-100">
+        <div className="text-center sm:text-lg space-y-6 mt-8 text-gray-100">
           <p>
             We are a global community built on a mutually shared vision and
             passion for the art of this project. The team has prepared this
@@ -176,12 +194,12 @@ const HomePage = () => {
       <Container>
         <section className="mt-56">
           <h2
-            className="font-heading text-5xl uppercase text-center mt-16"
+            className="font-heading text-3xl sm:text-5xl uppercase text-center mt-16"
             id="roadmap"
           >
             ROADMAP
           </h2>
-          <p className="text-center  text-lg text-gray-100 mt-8 mx-auto max-w-3xl">
+          <p className="text-center sm:text-lg text-gray-100 mt-8 mx-auto max-w-3xl">
             Our initial plan is to grow the community and show everybody that
             anything can be overcome if our community works together!{' '}
           </p>
@@ -204,7 +222,7 @@ const HomePage = () => {
       <Container>
         <section className="mt-56">
           <h2
-            className="font-heading text-5xl uppercase text-center mt-16"
+            className="font-heading text-3xl sm:text-5xl uppercase text-center mt-16"
             id="faq"
           >
             FAQ
