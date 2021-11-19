@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: 'https://next-typescript.basement.studio/',
+  siteUrl: 'https://lbaccommunity.com/',
   generateRobotsTxt: true,
   exclude: []
 }

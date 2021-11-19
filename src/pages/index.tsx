@@ -138,7 +138,9 @@ const HomePage = () => {
           <header className="flex items-center space-x-16">
             <div className="w-24 text-right text-sm sm:text-base">
               <Link href="#roadmap">
-                <a className="uppercase font-bold">ROADMAP</a>
+                <a className="uppercase font-bold hover:opacity-80 transition-opacity">
+                  ROADMAP
+                </a>
               </Link>
             </div>
             <Link href="/">
@@ -156,7 +158,9 @@ const HomePage = () => {
             </Link>
             <div className="w-24 text-left text-sm sm:text-base">
               <Link href="#faq">
-                <a className="uppercase font-bold">FAQ</a>
+                <a className="uppercase font-bold hover:opacity-80 transition-opacity">
+                  FAQ
+                </a>
               </Link>
             </div>
           </header>
@@ -195,9 +199,9 @@ const HomePage = () => {
         <div className="flex justify-center mt-14">
           <a
             href="https://opensea.io/collection/lilbabyapeclub"
-            className="uppercase bg-gradient-to-b from-purple to-light-blue text-black flex items-center px-12 py-4 rounded-2xl font-bold"
+            className="uppercase bg-gradient-to-b from-purple to-light-blue text-black flex items-center px-12 py-4 rounded-2xl font-bold hover:scale-110 transition active:scale-95"
           >
-            GET A LIL BORED APE
+            GET A LIL BABY APE
           </a>
         </div>
       </Container>
