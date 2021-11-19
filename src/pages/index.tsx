@@ -98,6 +98,12 @@ const HomePage = () => {
       '(min-width: 1024px)': {
         slidesPerView: 2
       }
+    },
+    dragStart: () => {
+      if (ref.current) ref.current.style.cursor = 'grabbing'
+    },
+    dragEnd: () => {
+      if (ref.current) ref.current.style.removeProperty('cursor')
     }
   })
 
@@ -138,7 +144,7 @@ const HomePage = () => {
           <header className="flex items-center space-x-16">
             <div className="w-24 text-right text-sm sm:text-base">
               <Link href="#roadmap">
-                <a className="uppercase font-bold hover:opacity-80 transition-opacity">
+                <a className="uppercase font-bold hover:opacity-60 transition-opacity">
                   ROADMAP
                 </a>
               </Link>
@@ -158,7 +164,7 @@ const HomePage = () => {
             </Link>
             <div className="w-24 text-left text-sm sm:text-base">
               <Link href="#faq">
-                <a className="uppercase font-bold hover:opacity-80 transition-opacity">
+                <a className="uppercase font-bold hover:opacity-60 transition-opacity">
                   FAQ
                 </a>
               </Link>
@@ -221,7 +227,7 @@ const HomePage = () => {
             </p>
             <div
               ref={ref}
-              className="keen-slider mt-12"
+              className="keen-slider mt-12 cursor-[grab]"
               style={{ overflow: 'visible' }}
             >
               {roadmap.map((card) => {
@@ -444,7 +450,7 @@ function FAQItem({ title, content }: FAQProps) {
 
   return (
     <button
-      className="appearance-none flex flex-col text-left py-8 w-full"
+      className="appearance-none flex flex-col text-left py-8 w-full hover:opacity-80 transition-opacity"
       onClick={() => {
         setIsOpen((p) => !p)
       }}
