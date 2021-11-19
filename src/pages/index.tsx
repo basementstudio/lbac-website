@@ -267,6 +267,7 @@ const HomePage = () => {
                 href="https://discord.gg/5VPAjSpT"
                 target="_blank"
                 rel="noopener"
+                className="hover:opacity-60 transition-opacity"
               >
                 <svg
                   width="32"
@@ -283,9 +284,10 @@ const HomePage = () => {
               </a>
               <a
                 title="twitter"
-                href="https://twitter.com/Lilbabyapeclub"
+                href="https://twitter.com/LBACofficial"
                 target="_blank"
                 rel="noopener"
+                className="hover:opacity-60 transition-opacity"
               >
                 <svg
                   width="32"
@@ -305,6 +307,7 @@ const HomePage = () => {
                 href="https://opensea.io/collection/lilbabyapeclub"
                 target="_blank"
                 rel="noopener"
+                className="hover:opacity-60 transition-opacity"
               >
                 <svg
                   width="32"
@@ -450,12 +453,12 @@ function FAQItem({ title, content }: FAQProps) {
 
   return (
     <button
-      className="appearance-none flex flex-col text-left py-8 w-full hover:opacity-80 transition-opacity"
+      className="appearance-none flex flex-col text-left py-8 w-full group"
       onClick={() => {
         setIsOpen((p) => !p)
       }}
     >
-      <div className="flex justify-between space-x-4 w-full items-start">
+      <div className="flex justify-between space-x-4 w-full items-start group-hover:opacity-80 transition-opacity">
         <p className="font-heading font-bold text-xl sm:text-2xl">{title}</p>
         {isOpen ? (
           <svg
